@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.rv-tabbar.fixed {
+  position: fixed;
+}
+
+.rv-cell--required::before {
+  display: none;
+}
+
+.rv-nav-bar .rv-icon {
+  --tw-text-opacity: 1;
+  font-size: 1.4rem;
+  color: rgba(107, 114, 128, var(--tw-text-opacity)) !important;
+}
+
+.barter .rv-dropdown-menu__bar {
+  box-shadow: none;
+}
+
+.barter .direction-selector .rv-selector__item {
+  padding: 0.7em 2.6em;
+}
+
+.barter .direction-selector .rv-selector__item:first-child.rv-selector__item--active {
+  background: red;
+  color: #fff;
+}
+.barter
+  .direction-selector
+  .rv-selector__item:first-child.rv-selector__item--active
+  .rv-selector__check-mark-wrapper {
+  border-top: solid 2.13333vw transparent;
+  border-bottom: solid 2.13333vw #de1010;
+  border-left: solid 2.66667vw transparent;
+  border-right: solid 2.66667vw #de1010;
+}
+
+.barter .direction-selector .rv-selector__item:last-child.rv-selector__item--active {
+  background: #3da809;
+  color: #fff;
+}
+.barter
+  .direction-selector
+  .rv-selector__item:last-child.rv-selector__item--active
+  .rv-selector__check-mark-wrapper {
+  border-top: solid 2.13333vw transparent;
+  border-bottom: solid 2.13333vw #317f0a;
+  border-left: solid 2.66667vw transparent;
+  border-right: solid 2.66667vw #317f0a;
+}
+
+.barter .rv-stepper__minus::before,
+.barter .rv-stepper__plus::before,
+.barter .rv-stepper__minus::after,
+.barter .rv-stepper__plus::after {
+  background-color: red;
+}
+
+.barter .num-stepper .leading-loose {
+  line-height: 6.2 !important;
+}
